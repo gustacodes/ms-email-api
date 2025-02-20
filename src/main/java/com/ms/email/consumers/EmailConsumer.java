@@ -10,7 +10,7 @@ public class EmailConsumer {
 
     @RabbitListener(queues = "${broker.queue.email.name}")
     public void listenEmailQueue(@Payload EmailRecordDto dto) {
-        System.out.println(dto.emailTo());
+        System.out.println(dto.text());
     }
 
 }
